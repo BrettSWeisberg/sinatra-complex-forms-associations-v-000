@@ -3,7 +3,7 @@
 
 
 
-  <p>Pet Name:<input type="text" name= "pet_name" value= "<%=@pet.name%>"></p><br>
+  <p>Pet Name:<input type="text" id="pet_name" name= "pet_name" value= "<%=@pet.name%>"></p><br>
   <p>Owner Name:<input type="text" name="owner_name" value="<%=@owners.find(@pet.owner_id)[:name]%>"><p><br>
   <input type="submit" value="Update Pet">
 </form>
