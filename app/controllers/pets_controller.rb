@@ -37,7 +37,7 @@ class PetsController < ApplicationController
   #  binding.pry
     @pet = Pet.find(params[:id])
     if params["pet_name"] != @pet.name
-      @pet.update(name: params[:name])
+      @pet.update(name: params[:pet_name])
     end
     if params[:owner][:name] != @pet.owner.name
 
