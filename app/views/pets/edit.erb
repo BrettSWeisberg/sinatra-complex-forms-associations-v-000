@@ -5,5 +5,5 @@
 
   <p>Pet Name:<input type="text" name= "pet_name" value= "<%=@pet.name%>"></p><br>
   <p>Owner Name:<input type="text" name="owner" value="<%=@owners.find(@pet.owner_id)[:name]%>"><p><br>
-  <input type="submit" action="submit" value="Update Pet">
+  <input type="submit" value="Update Pet">
 </form>
