@@ -33,13 +33,6 @@ class PetsController < ApplicationController
     erb :'/pets/show'
   end
 
-  get '/pets/:id/edit' do
-
-    @pet = Pet.find(params[:id])
-    @owners = Owner.all
-    erb :'/pets/edit'
-  end
-  
   post '/pets/:id' do
     binding.pry
     @pet = Pet.find(params[:id])
@@ -50,6 +43,13 @@ class PetsController < ApplicationController
     if params["owner"] != @pet.owner.name
     end
     redirect to "pets/#{@pet.id}"
+  end
+  
+  get '/pets/:id/edit' do
+
+    @pet = Pet.find(params[:id])
+    @owners = Owner.all
+    erb :'/pets/edit'
   end
 
 
