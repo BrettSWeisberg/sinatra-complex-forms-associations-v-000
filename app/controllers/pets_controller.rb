@@ -40,7 +40,7 @@ class PetsController < ApplicationController
       @pet.update(name: params[:name])
     end
     if params["owner"] != @pet.owner.name
-      @pet.update(name: params[:name])
+      @pet.update(name: params[:owner_name])
     end
     redirect to "pets/#{@pet.id}"
   end
