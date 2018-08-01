@@ -4,7 +4,7 @@
 
 
   <p>Pet Name:<input type="text" id="pet_name" name= "pet[name]" value= "<%=@pet.name%>"></p><br>
-  <p>Owner Name:<input type="text" id="owner_name" name="owner[name]" value="<%=@owners.find(@pet.owner_id)[:name]%>"><p><br>
+  <p>Owner Name:<input type="text" id="owner_name" name="owner[name]"><p><br>
     <%Owner.all.each do |owner|%>
 
       <input type="radio" name="pet[owner_id]" id="<%= owner.id%>" value="<%=owner.id%>" <%='checked' if @pet.owner == owner%>><%=owner.name%></input>
