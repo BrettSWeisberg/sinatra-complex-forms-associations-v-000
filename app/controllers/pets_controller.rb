@@ -45,7 +45,7 @@ class PetsController < ApplicationController
   #  end
   #  if params[:owner_id] != @pet.owner_id
   #  @pet.update(name: params[:owner_id])
- @pet.update(name: params[:pet_name])
+ @pet.update(params[:pet])
  binding.pry
  if params[:pet][:owner_id].to_i != @pet.owner_id
    @owner = Owner.find(params[:pet][:owner_id])
