@@ -4,6 +4,6 @@
 
 
   <p>Pet Name:<input type="text" id="pet_name" name= "pet_name" value= "<%=@pet.name%>"></p><br>
-  <p>Owner Name:<input type="text" name="owner_name" value="<%=@owners.find(@pet.owner_id)[:name]%>"><p><br>
-  <input type="submit" value="Update Pet">
+  <p>Owner Name:<input type="text" id="owner_name" name="owner_name" value="<%=@owners.find(@pet.owner_id)[:name]%>"><p><br>
+  <input type="submit" id="submit" value="Update Pet">
 </form>
