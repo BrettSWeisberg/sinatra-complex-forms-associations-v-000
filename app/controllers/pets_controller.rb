@@ -46,6 +46,8 @@ class PetsController < ApplicationController
   #  if params[:owner_id] != @pet.owner_id
   #  @pet.update(name: params[:owner_id])
  @pet.update(name: params[:pet_name])
+ if params[:owner_id].to_i != @pet.owner_id.to_i
+   @pet.update(name: params[:owner_id])
  binding.pry
   #end
     redirect to "pets/#{@pet.id}"
