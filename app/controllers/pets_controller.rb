@@ -47,7 +47,7 @@ class PetsController < ApplicationController
   #  @pet.update(name: params[:owner_id])
  @pet.update(name: params[:pet_name])
  #binding.pry
- if params[:pet][:owner_id].to_i != @pet.owner_id 
+ if params[:pet][:owner_id].to_i != @pet.owner_id
    @owner = Owner.find(params[:pet][:owner_id])
    @pet.update(owner: @owner)
  binding.pry
